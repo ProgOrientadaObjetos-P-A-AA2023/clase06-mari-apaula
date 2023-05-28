@@ -5,6 +5,7 @@
  */
 package paquete02;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Ejecutor {
@@ -19,6 +20,8 @@ public class Ejecutor {
         String opcion;
         Scanner entrada = new Scanner(System.in);
         String cadenaFinal;
+        entrada.useLocale(Locale.US);
+        
         // Inicio de proceso iterativo 
         bandera = true;
         cadenaFinal = ""; // inicializo la variable que contendrá la cadena
