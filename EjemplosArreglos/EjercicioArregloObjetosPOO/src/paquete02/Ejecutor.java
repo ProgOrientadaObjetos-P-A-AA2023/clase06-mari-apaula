@@ -5,6 +5,7 @@
  */
 package paquete02;
 
+import java.util.Locale;
 import java.util.Scanner;
 import paquete01.Calificacion;
 import paquete01.LibretaCalificacion;
@@ -19,7 +20,7 @@ public class Ejecutor {
     public static void main(String[] args) {
         // listado de variables para ingreso de datos por teclado
         Scanner entrada = new Scanner(System.in);
-
+        entrada.useLocale(Locale.US);
         String nombreEstudiante;
         double nota;
         String materia;
@@ -49,16 +50,16 @@ public class Ejecutor {
 
             // con las variables nota y nombreEstudiante se procede
             // a crear un objeto de tipo Calificacion
-            Calificacion cal = new Calificacion(nota, materia);
             //
             System.out.printf("Ingrese nombre del profesor %d\n", i + 1);
             nombreProfesor = entrada.nextLine();
-            System.out.printf("Ingrese tipo de contrato del profesor %d\n", 
+            System.out.printf("Ingrese tipo de contrato del profesor %d\n",
                     i + 1);
             tipoProfesor = entrada.nextLine();
-            
+
             Profesor p1 = new Profesor(nombreProfesor, tipoProfesor);
-            //
+
+            Calificacion cal = new Calificacion(nota, materia, p1);
             // cal.establecerProfesor(new Profesor("René Elizalde", "contratado 1"));
             cal.establecerProfesor(p1);
             // Se agrega el objeto calificacion creado al arreglo

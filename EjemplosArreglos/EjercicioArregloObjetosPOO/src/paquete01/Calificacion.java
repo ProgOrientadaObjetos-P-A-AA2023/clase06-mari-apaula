@@ -10,14 +10,14 @@ package paquete01;
  * @author reroes
  */
 public class Calificacion {
-
-    private double nota;
+private double nota;
     private String nombreMateria;
     private Profesor profesor;
 
-    public Calificacion(double n, String nombre) {
+    public Calificacion(double n, String nombre, Profesor p) {
         nota = n;
         nombreMateria = nombre;
+        profesor = p;
     }
 
     public void establecerNota(double n) {

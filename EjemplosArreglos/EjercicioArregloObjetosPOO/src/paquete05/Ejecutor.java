@@ -8,7 +8,6 @@ package paquete05;
 public class Ejecutor {
     public static void main(String[] args) {
               
-        
         Calificacion c1 = new Calificacion(10, "Computación");
         Calificacion c2 = new Calificacion(10, "Lógica");
         Calificacion c3 = new Calificacion(10, "Literatura");
